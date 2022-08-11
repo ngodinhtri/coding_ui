@@ -1,0 +1,24 @@
+// https://colorhunt.co/palette/dddddd22283130475ef05454
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 20px;
+
+    .logo {
+        width: 200px;
+        height: 200px;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    .title {
+        color: var(--navy-clr);
+        font-size: 5rem;
+        font-weight: 700;
+    }
+}
