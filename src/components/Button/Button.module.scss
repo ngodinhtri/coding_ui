@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 10px 20px;
+    background-color: var(--btn-clr);
+    border-radius: var(--btn-border-radius);
+    color: white;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper {
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.active {
+        background-image: linear-gradient(
+            to right top,
+            var(--primary-clr),
+            var(--navy-clr)
+        );
+    }
+
+    &.outline {
+        border: 1px solid rgba($color: #f05454, $alpha: 0.5);
+        background-color: transparent;
+    }
+
+    &.hoverBlue:hover {
+        background-color: var(--blue-clr);
+    }
+
+    &.hoverOrange:hover {
+        background-color: var(--orange-clr);
+    }
+}
