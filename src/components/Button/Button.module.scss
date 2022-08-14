@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     padding: 10px 20px;
     background-color: var(--btn-clr);
     border-radius: var(--btn-border-radius);
@@ -21,7 +21,7 @@
         background-image: linear-gradient(
             to right top,
             var(--primary-clr),
-            var(--navy-clr)
+            var(--blue-clr)
         );
     }
 
