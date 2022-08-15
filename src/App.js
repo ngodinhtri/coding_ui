@@ -6,6 +6,7 @@ import GlobalStyles from "./components/GlobalStyles";
 import Filter from "./components/Filter";
 import Content from "./components/Content";
 import ScrollToTopBtn from "./components/ScrollToTopBtn";
+import { FilterStateProvider } from "./components/FilterState";
 
 function App() {
     return (
@@ -13,8 +14,10 @@ function App() {
             <div className={clsx(styles.wrapper)}>
                 <div id="notification_popup" />
                 <Header />
-                <Filter />
-                <Content />
+                <FilterStateProvider>
+                    <Filter />
+                    <Content />
+                </FilterStateProvider>
                 <ScrollToTopBtn />
             </div>
         </GlobalStyles>

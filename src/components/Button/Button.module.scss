@@ -7,9 +7,8 @@
     background-color: var(--btn-clr);
     border-radius: var(--btn-border-radius);
     color: white;
-    outline: none;
-    border: none;
     transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
 }
 
 .wrapper {
@@ -18,6 +17,7 @@
     }
 
     &.active {
+        border: none;
         background-image: linear-gradient(
             to right top,
             var(--primary-clr),
@@ -26,7 +26,7 @@
     }
 
     &.outline {
-        border: 1px solid rgba($color: #f05454, $alpha: 0.5);
+        border-color: rgba($color: #f05454, $alpha: 0.5);
         background-color: transparent;
     }
 
