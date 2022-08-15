@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import GlobalStyles from "./components/GlobalStyles";
 import Filter from "./components/Filter";
 import Content from "./components/Content";
+import ScrollToTopBtn from "./components/ScrollToTopBtn";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Header />
                 <Filter />
                 <Content />
+                <ScrollToTopBtn />
             </div>
         </GlobalStyles>
     );
