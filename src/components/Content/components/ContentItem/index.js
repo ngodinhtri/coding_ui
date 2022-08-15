@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 import Button from "../../../Button";
 import ViewCode from "../ViewCode";
-import showCopySuccess from "./showCopySuccess";
+import showCopySuccess from "../../../../lib/showCopySuccess";
 
 const DemoCodeStyle = styled.div`
     ${(props) => props.css}

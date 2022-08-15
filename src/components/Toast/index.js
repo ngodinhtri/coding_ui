@@ -18,9 +18,6 @@ export default function Toast({ message, status }) {
                     <h3 className="toast__body_title">{status}</h3>
                     <p className="toast__body_message">{message}</p>
                 </div>
-                <div className="toast__close">
-                    <i className="fas fa-times"></i>
-                </div>
             </div>
         </ToastDiv>
     );

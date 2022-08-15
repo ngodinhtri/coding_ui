@@ -17,7 +17,7 @@ const fadeOut = keyframes`
 
 export const ToastDiv = styled.div`
     .toast {
-        --success-color: #47d764;
+        --success-color: #1e5128;
         --info-color: #2f86eb;
         --warning-color: #ffc021;
         --title-color: #333;
@@ -30,7 +30,7 @@ export const ToastDiv = styled.div`
 
         display: flex;
         align-items: center;
-        background-color: #fff;
+        background-color: var(--light-clr);
         padding: 0;
         border-left: 4px solid #000;
         border-radius: 8px;
@@ -56,13 +56,14 @@ export const ToastDiv = styled.div`
             flex: 1;
 
             &_title {
+                text-transform: uppercase;
                 margin: 10px 0;
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 color: $title-color;
             }
             &_message {
                 margin: 10px 0;
-                font-size: 1.6rem;
+                font-size: 1.4rem;
                 color: $message-color;
             }
         }

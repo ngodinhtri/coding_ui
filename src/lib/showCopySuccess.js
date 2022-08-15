@@ -1,4 +1,4 @@
-import Toast from "../../../Toast";
+import Toast from "../components/Toast";
 import { renderToStaticMarkup } from "react-dom/server";
 
 export default function showCopySuccess() {
@@ -23,10 +23,8 @@ export default function showCopySuccess() {
         }, 2000);
 
         toast.onclick = function (e) {
-            if (e.target.closest(".toast__close")) {
-                main.removeChild(toast);
-                clearTimeout(autoRemove);
-            }
+            main.removeChild(toast);
+            clearTimeout(autoRemove);
         };
 
         main.appendChild(toast);
