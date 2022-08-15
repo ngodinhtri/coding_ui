@@ -11,6 +11,7 @@ function App() {
     return (
         <GlobalStyles>
             <div className={clsx(styles.wrapper)}>
+                <div id="notification_popup" />
                 <Header />
                 <Filter />
                 <Content />
