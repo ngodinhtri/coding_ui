@@ -9,6 +9,10 @@ import Button from "../../../Button";
 import ViewCode from "../ViewCode";
 import showCopySuccess from "../../../../lib/showCopySuccess";
 
+import { FiCopy } from "react-icons/fi";
+import { TbCode, TbCodeOff } from "react-icons/tb";
+
+//import css code demo of  from source code
 const DemoCodeStyle = styled.div`
     ${(props) => props.css}
 `;
@@ -29,30 +33,43 @@ function ContentItem({ demo }) {
 
     return (
         <div className={clsx(styles.wrapper)}>
+            {/* HEADER */}
             <div className={clsx(styles.header)}>
                 <h2 className={clsx(styles.name)}>{name}</h2>
-                <Button
-                    active
-                    onClick={() => {
-                        setShowCode(!showCode);
-                    }}
-                >
-                    {showCode ? "Hide Code" : "View Code"}
-                </Button>
             </div>
-
+            {/* DEMO */}
             <div className={clsx(styles.demo)}>
                 <DemoCodeStyle css={cssCode}>
                     <>{parse(htmlCode)}</>
                 </DemoCodeStyle>
             </div>
-
+            {/* FOOTER */}
             <div className={clsx(styles.footer)}>
-                <Button hoverBlue onClick={() => copyText(htmlCode)}>
-                    Copy HTML
+                <Button hoverLight onClick={() => copyText(htmlCode)}>
+                    <FiCopy className={clsx(styles.btnIcon)} />
+                    &nbsp;HTML
                 </Button>
-                <Button hoverOrange onClick={() => copyText(cssCode)}>
-                    Copy CSS
+                <Button hoverLight onClick={() => copyText(cssCode)}>
+                    <FiCopy className={clsx(styles.btnIcon)} />
+                    &nbsp;CSS
+                </Button>
+                <Button
+                    hoverLight
+                    onClick={() => {
+                        setShowCode(!showCode);
+                    }}
+                >
+                    {showCode ? (
+                        <TbCodeOff
+                            style={{ fontSize: "2rem" }}
+                            className={clsx(styles.btnIcon)}
+                        />
+                    ) : (
+                        <TbCode
+                            style={{ fontSize: "2rem" }}
+                            className={clsx(styles.btnIcon)}
+                        />
+                    )}
                 </Button>
             </div>
             {showCode && <ViewCode htmlCode={htmlCode} cssCode={cssCode} />}

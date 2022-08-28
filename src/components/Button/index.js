@@ -8,6 +8,7 @@ function Button({
     outline = false,
     hoverBlue = false,
     hoverOrange = false,
+    hoverLight = false,
     ...restProps
 }) {
     let Component = "button";
@@ -16,7 +17,8 @@ function Button({
         [styles.active]: active,
         [styles.outline]: outline,
         [styles.hoverBlue]: hoverBlue,
-        [styles.hoverOrange]: hoverOrange
+        [styles.hoverOrange]: hoverOrange,
+        [styles.hoverLight]: hoverLight
     });
 
     const props = { ...restProps };

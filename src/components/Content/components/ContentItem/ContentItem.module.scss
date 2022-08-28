@@ -1,7 +1,8 @@
 .wrapper {
-    background-color: var(--navy-clr);
+    background-color: var(--dark-clr);
     padding: 20px;
     border-radius: 10px;
+    border: 1px dashed var(--light-clr);
 }
 
 .header {
@@ -22,6 +23,19 @@
 
 .footer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0 20px;
+
+    button {
+        background-color: transparent;
+        color: var(--light-clr);
+
+        &:hover {
+            color: var(--dark-clr);
+        }
+
+        & .btnIcon {
+            font-size: 1.6rem;
+        }
+    }
 }

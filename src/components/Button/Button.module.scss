@@ -21,12 +21,13 @@
         background-image: linear-gradient(
             to right top,
             var(--primary-clr),
-            var(--blue-clr)
+            var(--primary-clr)
         );
     }
 
     &.outline {
-        border-color: rgba($color: #f05454, $alpha: 0.5);
+        // border-color: rgba($color: #f05454, $alpha: 0.5);
+        border: 1px dashed var(--light-clr);
         background-color: transparent;
     }
 
@@ -36,5 +37,9 @@
 
     &.hoverOrange:hover {
         background-color: var(--orange-clr);
+    }
+
+    &.hoverLight:hover {
+        background-color: var(--light-clr);
     }
 }
