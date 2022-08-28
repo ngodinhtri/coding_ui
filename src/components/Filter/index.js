@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Button from "../Button";
 import styles from "./Filter.module.scss";
-import demoList from "../Content/src";
+import demoList from "../../src";
 import { useContext } from "react";
 import { FilterStateContext } from "../FilterState";
 

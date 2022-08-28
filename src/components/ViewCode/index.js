@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import styles from "./ViewCode.module.scss";
-import Code from "../Code";
+import Code from "./Code";
 
 function ViewCode({ htmlCode, cssCode }) {
     return (

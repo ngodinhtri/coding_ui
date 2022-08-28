@@ -1,4 +1,4 @@
-import { frontCard, backCard } from "../../../assets/images";
+import { frontCard, backCard } from "../assets/images";
 
 const list = [
     {

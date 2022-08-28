@@ -1,27 +1,27 @@
 import clsx from "clsx";
-import styles from "./ContentItem.module.scss";
+import styles from "./Card.module.scss";
 import js_beautify from "js-beautify";
 import { useState } from "react";
 import parse from "html-react-parser";
 import styled from "styled-components";
 
-import Button from "../../../Button";
+import Button from "../Button";
 import ViewCode from "../ViewCode";
-import showCopySuccess from "../../../../lib/showCopySuccess";
+import showCopySuccess from "../../lib/showCopySuccess";
 
 import { FiCopy } from "react-icons/fi";
 import { TbCode, TbCodeOff } from "react-icons/tb";
 
 //import css code demo of  from source code
 const DemoCodeStyle = styled.div`
-    ${(props) => props.css}
+    ${(props) => props.styles}
 `;
 
-function ContentItem({ demo }) {
+function Card({ demo }) {
     const { name, html, css } = demo;
     //Format Code
     const htmlCode = js_beautify.html(html);
-    const cssCode = js_beautify.html(css);
+    const cssCode = js_beautify.css(css);
 
     //HandleOnClick Copy Btn
     const copyText = (text) => {
@@ -39,7 +39,7 @@ function ContentItem({ demo }) {
             </div>
             {/* DEMO */}
             <div className={clsx(styles.demo)}>
-                <DemoCodeStyle css={cssCode}>
+                <DemoCodeStyle styles={cssCode}>
                     <>{parse(htmlCode)}</>
                 </DemoCodeStyle>
             </div>
@@ -76,4 +76,4 @@ function ContentItem({ demo }) {
         </div>
     );
 }
-export default ContentItem;
+export default Card;

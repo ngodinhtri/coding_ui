@@ -1,7 +1,7 @@
 import clsx from "clsx";
-import ContentItem from "./components/ContentItem";
+import Card from "../Card";
 import styles from "./Content.module.scss";
-import { default as demoList } from "./src";
+import { default as demoList } from "../../src";
 import Masonry from "react-masonry-css";
 import "./Masonry.css";
 import { FilterStateContext } from "../FilterState";
@@ -27,7 +27,7 @@ function Content() {
                 {demoList
                     .filter(filterDemo(filterStateContext.filterState))
                     .map((demo, index) => (
-                        <ContentItem demo={demo} key={index} />
+                        <Card demo={demo} key={index} />
                     ))}
             </Masonry>
         </div>
